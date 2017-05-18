@@ -1,0 +1,716 @@
+#include <iostream>
+#include <conio.h>
+#include <Windows.h>
+#include "CELL.h"
+#include <time.h>
+
+using namespace std;
+void infect(int N, CELL **&skin)
+{
+    int c =0;
+    for (int i = 0; i <N; i++)
+    {
+        for (int j = 0; j <N; j++)
+        {
+/**********/if(i==0&&j==0)///ліва верхня клітина************************************************************************
+            {
+                if(skin[i][j].getStatus()==1&&skin[i][j].getTimeOfInfection()>0)
+                {
+                    bool infected = false;
+                    int step =1, K[3], z=0, k;
+                    while (!infected&&step<3)
+                    {
+                        bool selected = false;
+                        while(!selected)
+                        {
+                            bool flag = true;
+							k = random(3)+1;
+                            for(int s=0; s<z; s++)
+                                if(K[s]==k) flag = false;
+                            if(flag){selected = true; K[z]=k; z++;}
+                        }
+                        switch (k)
+                        {
+                            case 1: {
+                                if(skin[i][j+1].getStatus()==0)
+                                {
+									bool f =random(2);
+									if(f){
+                                        skin[i][j+1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 2: {
+                                if(skin[i+1][j+1].getStatus()==0)
+                                {
+									bool f =random(2);
+                                    if(f){
+                                        skin[i+1][j+1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 3: {
+                                if(skin[i+1][j].getStatus()==0)
+                                {
+									bool f =random(2);
+                                    if(f){
+                                        skin[i+1][j].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                        }
+                    }
+                }
+            }
+/**********/else if(i==0&&j==N-1)///права верхня клітина************************************************************************
+            {
+                if(skin[i][j].getStatus()==1&&skin[i][j].getTimeOfInfection()>0)
+                {
+                    bool infected = false;
+                    int step =1, K[3], z=0, k;
+                    while (!infected&&step<3)
+                    {
+                        bool selected = false;
+                        while(!selected)
+                        {
+                            bool flag = true;
+							k = random(3)+1;
+                            for(int s=0; s<z; s++)
+                                if(K[s]==k) flag = false;
+                            if(flag){selected = true; K[z]=k; z++;}
+                        }
+                        switch (k)
+                        {
+                            case 1: {
+                                if(skin[i+1][j].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i+1][j].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 2: {
+                                if(skin[i+1][j-1].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i+1][j-1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 3: {
+                                if(skin[i][j-1].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i][j-1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                        }
+                    }
+                }
+            }
+/**********/else if(i==N-1&&j==0)///ліва нижня клітина************************************************************************
+            {
+                if(skin[i][j].getStatus()==1&&skin[i][j].getTimeOfInfection()>0)
+                {
+                    bool infected = false;
+                    int step =1, K[3], z=0, k;
+                    while (!infected&&step<3)
+                    {
+                        bool selected = false;
+                        while(!selected)
+                        {
+                            bool flag = true;
+							k = random(3)+1;
+                            for(int s=0; s<z; s++)
+                                if(K[s]==k) flag = false;
+                            if(flag){selected = true; K[z]=k; z++;}
+                        }
+                        switch (k)
+                        {
+                            case 1: {
+                                if(skin[i-1][j].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i-1][j].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 2: {
+                                if(skin[i-1][j+1].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i-1][j+1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 3: {
+                                if(skin[i][j+1].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i][j+1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                        }
+                    }
+                }
+            }
+/**********/else if(i==N-1&&j==N-1)///права нижня клітина************************************************************************
+            {
+                if(skin[i][j].getStatus()==1&&skin[i][j].getTimeOfInfection()>0)
+                {
+                    bool infected = false;
+                    int step =1, K[3], z=0, k;
+                    while (!infected&&step<3)
+                    {
+                        bool selected = false;
+                        while(!selected)
+                        {
+                            bool flag = true;
+							k = random(3)+1;
+                            for(int s=0; s<z; s++)
+                                if(K[s]==k) flag = false;
+                            if(flag){selected = true; K[z]=k; z++;}
+                        }
+                        switch (k)
+                        {
+                            case 1: {
+                                if(skin[i][j-1].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i][j-1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 2: {
+                                if(skin[i-1][j-1].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i-1][j-1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 3: {
+                                if(skin[i-1][j].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i-1][j].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                        }
+                    }
+                }
+            }
+/**********/else if(i==0&&j>0&&j<N-1)///верхній ряд************************************************************************
+            {
+                if(skin[i][j].getStatus()==1&&skin[i][j].getTimeOfInfection()>0)
+                {
+                    bool infected = false;
+                    int step =1, K[5], z=0, k;
+                    while (!infected&&step<5)
+                    {
+                        bool selected = false;
+                        while(!selected)
+                        {
+                            bool flag = true;
+							k = random(5)+1;
+                            for(int s=0; s<z; s++)
+                                if(K[s]==k) flag = false;
+                            if(flag){selected = true; K[z]=k; z++;}
+                        }
+                        switch (k)
+                        {
+                            case 1: {
+                                if(skin[i][j+1].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i][j+1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 2: {
+                                if(skin[i+1][j+1].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i+1][j+1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 3: {
+                                if(skin[i+1][j].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i+1][j].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 4: {
+                                if(skin[i+1][j-1].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i+1][j-1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 5: {
+                                if(skin[i][j-1].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i][j-1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                        }
+                    }
+                }
+            }
+/**********/else if(i==N-1&&j>0&&j<N-1)///нижній ряд************************************************************************
+            {
+                if(skin[i][j].getStatus()==1&&skin[i][j].getTimeOfInfection()>0)
+                {
+                    bool infected = false;
+                    int step =1, K[5], z=0, k;
+                    while (!infected&&step<5)
+                    {
+                        bool selected = false;
+                        while(!selected)
+                        {
+                            bool flag = true;
+							k = random(5)+1;
+                            for(int s=0; s<z; s++)
+                                if(K[s]==k) flag = false;
+                            if(flag){selected = true; K[z]=k; z++;}
+                        }
+                        switch (k)
+                        {
+                            case 1: {
+                                if(skin[i][j-1].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i][j-1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 2: {
+                                if(skin[i-1][j-1].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i-1][j-1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 3: {
+                                if(skin[i-1][j].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i-1][j].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 4: {
+                                if(skin[i-1][j+1].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i-1][j+1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 5: {
+                                if(skin[i][j+1].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i][j+1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                        }
+                    }
+                }
+            }
+/**********/else if(i>0&&i<N-1&&j==0)///лівий ряд************************************************************************
+            {
+                if(skin[i][j].getStatus()==1&&skin[i][j].getTimeOfInfection()>0)
+                {
+                    bool infected = false;
+                    int step =1, K[5], z=0, k;
+                    while (!infected&&step<5)
+                    {
+                        bool selected = false;
+                        while(!selected)
+                        {
+                            bool flag = true;
+							k = random(5)+1;
+                            for(int s=0; s<z; s++)
+                                if(K[s]==k) flag = false;
+                            if(flag){selected = true; K[z]=k; z++;}
+                        }
+                        switch (k)
+                        {
+                            case 1: {
+                                if(skin[i-1][j].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i-1][j].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 2: {
+                                if(skin[i-1][j+1].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i-1][j+1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 3: {
+                                if(skin[i][j+1].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i][j+1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 4: {
+                                if(skin[i+1][j+1].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i+1][j+1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 5: {
+                                if(skin[i+1][j].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i+1][j].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                        }
+                    }
+                }
+            }
+/**********/else if(i>0&&i<N-1&&j==N-1)///правий ряд************************************************************************
+            {
+                if(skin[i][j].getStatus()==1&&skin[i][j].getTimeOfInfection()>0)
+                {
+                    bool infected = false;
+                    int step =1, K[5], z=0, k;
+                    while (!infected&&step<5)
+                    {
+                        bool selected = false;
+                        while(!selected)
+                        {
+                            bool flag = true;
+							k = random(5)+1;
+                            for(int s=0; s<z; s++)
+                                if(K[s]==k) flag = false;
+                            if(flag){selected = true; K[z]=k; z++;}
+                        }
+                        switch (k)
+                        {
+                            case 1: {
+                                if(skin[i+1][j].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i+1][j].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 2: {
+                                if(skin[i+1][j-1].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i+1][j-1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 3: {
+                                if(skin[i][j-1].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i][j-1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 4: {
+                                if(skin[i-1][j-1].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i-1][j-1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 5: {
+                                if(skin[i-1][j].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i-1][j].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                        }
+                    }
+                }
+            }
+/**********/else///в середині****************************************************************************************************
+            {
+                if(skin[i][j].getStatus()==1&&skin[i][j].getTimeOfInfection()>0)
+                {
+                    //skin[i][j].setStatus(2);
+                    /**/bool infected = false;
+                    int step =1;int K[8];int z=0, k;
+                    while (!infected&&step<8)
+                    {
+                        /*cout << c << endl;
+                        c++;*/
+                        bool selected = false;
+                        while(!selected)
+                        {
+                            bool flag = true;
+							k = random(8)+1;
+                            for(int s=0; s<z; s++)
+                                if(K[s]==k) flag = false;
+                            if(flag){selected = true; K[z]=k; z++;}
+                        }
+                        switch (k)
+                        {
+                            case 1: {
+                                if(skin[i-1][j].getStatus()==0)
+                                {
+                                    bool f;
+									int f1=random(2);
+									if (f1==0) f =false;
+                                    else if(f1==1) f = true;
+                                    if(f){
+                                        skin[i-1][j].setStatus(1);
+                                        infected = true;
+                                        //step++;
+                                        break;
+                                    }
+                                    else if (!f) {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 2: {
+                                if(skin[i-1][j+1].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i-1][j+1].setStatus(1);
+                                        infected = true;
+                                    break;
+                                    }
+                                else {step++; break;}
+                            }
+                            else {step++; break;}
+                            }
+                            case 3: {
+                                if(skin[i][j+1].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i][j+1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 4: {
+                                if(skin[i+1][j+1].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i+1][j+1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 5: {
+                                if(skin[i+1][j].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i+1][j].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 6: {
+                                if(skin[i+1][j-1].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i+1][j-1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 7: {
+                                if(skin[i][j-1].getStatus()==0){
+									bool f =random(2);
+                                    if(f){
+                                        skin[i][j-1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                            case 8: {
+                                if(skin[i-1][j-1].getStatus()==0){
+                                    bool f =random(2);
+                                    if(f){
+                                        skin[i-1][j-1].setStatus(1);
+                                        infected = true;
+                                        break;
+                                    }
+                                    else {step++; break;}
+                                }
+                                else {step++; break;}
+                            }
+                        }
+                    }/**/
+                }
+            }
+        }
+    }
+}
+///***************************************************************************************************************************

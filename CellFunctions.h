@@ -1,0 +1,8 @@
+#ifndef CELLFUNCTIONS_H_INCLUDED
+#define CELLFUNCTIONS_H_INCLUDED
+
+void infect(int , CELL **&);
+
+#endif // CELLFUNCTIONS_H_INCLUDED
+
+
