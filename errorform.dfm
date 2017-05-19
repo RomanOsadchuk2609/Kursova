@@ -1834,13 +1834,24 @@ object Form2: TForm2
   TextHeight = 13
   object Label1: TLabel
     Left = 8
-    Top = 32
-    Width = 549
+    Top = 40
+    Width = 15
     Height = 58
-    Caption = #1053#1077#1087#1088#1072#1074#1080#1083#1100#1085#1086' '#1074#1074#1077#1076#1077#1085#1077' N!'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -48
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 144
+    Top = 8
+    Width = 8
+    Height = 33
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -27
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False

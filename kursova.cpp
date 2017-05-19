@@ -21,13 +21,63 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 
 void __fastcall TForm1::Button1Click(TObject *Sender)
 {
-///рарарар
-	int N;
+    int N;
 	double Pause;
 	//Pause = StrToFloat(EditPause->Text);
 	Pause = TrackBarDayTime->Position;
 	if(Pause == 0) Pause = 10;
 	N=StrToInt(EditN->Text);
+	int TOInf = 6, TOImm = 4;
+	bool correctInput = true;
+    Form2->Label1->Caption="";
+	Form2->Label2->Caption="";
+	if(StrToInt(EditTimeOfInfection->Text)>0)
+		TOInf = StrToInt(EditTimeOfInfection->Text);
+	else
+	{
+		correctInput = false;
+		Form2->Label1->Font->Size=20;
+		Form2->Label1->Left=20;
+		Form2->Label1->Caption="Неправильно введена тривалість інфекції!";
+    }
+	if(StrToInt(EditTimeOfImmunity->Text)>0)
+		TOImm = StrToInt(EditTimeOfImmunity->Text);
+	else
+	{
+		if(correctInput)
+		{
+		   correctInput = false;
+		   Form2->Label1->Font->Size=20;
+		   Form2->Label1->Left=15;
+		   Form2->Label1->Caption="Неправильно введена тривалість імунітету!";
+		}
+		else
+		{
+		   Form2->Label1->Font->Size=16;
+		   Form2->Label1->Left=25;
+		   Form2->Label1->Caption="Неправильно введена тривалість інфекції і імунітету!";
+        }
+
+	}
+	if(N<2||N%2==0)
+	{
+		if(correctInput)
+		{
+			correctInput = false;
+			Form2->Label1->Font->Size=36;
+			Form2->Label1->Caption="Неправильно введене N!";
+		}
+		else
+		{
+			Form2->Label2->Caption="Неправильно введене N!";
+        }
+    }
+	if(!correctInput)
+	{
+		Form2->Show();
+		return;
+	}
+
 	if(N>1&&N%2!=0)
 	{
 		int A = Form1->ClientHeight;
@@ -82,11 +132,7 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 						Canvas->Brush->Color=ColorBoxHealed->Selected;
 					}
 					Canvas->Rectangle(j*A/N,i*A/N,j*A/N+A/N-X,i*A/N+A/N-X);
-					/*Memo1->Lines->Clear();
-					Memo1->Lines->Append("\nКількість здорових клітин: "+IntToStr(healthy));
-					Memo1->Lines->Append("\nКількість інфікованих клітин: "+IntToStr(infected));
-					Memo1->Lines->Append("\nКількість клітин з  імунітетом: "+IntToStr(healed));
-					Memo1->Lines->Append("\nКІлькість днів від початку інфекції: "+IntToStr(DaySinceStartOfInfection));   */
+
 				}
 		Memo1->Lines->Clear();
 		Memo1->Lines->Append("\nКількість здорових клітин: "+IntToStr(healthy));
@@ -104,11 +150,11 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 				{
 					if(skin[i][j].getStatus()==1)//якщо клітана заражена - збільшити час зараження
 						skin[i][j].setTimeOfInfection(skin[i][j].getTimeOfInfection()+1);
-					if(skin[i][j].getStatus()==1&&skin[i][j].getTimeOfInfection()>6)
+					if(skin[i][j].getStatus()==1&&skin[i][j].getTimeOfInfection()>TOInf)
 						skin[i][j].setStatus(2);//якщо час зараження>6 - надати імунітет
 					if(skin[i][j].getStatus()==2)//якщо клітина з імунітетом - збільшити час імунітету
 						skin[i][j].setTimeOfImmunity(skin[i][j].getTimeOfImmunity()+1);
-					if(skin[i][j].getStatus()==2&&skin[i][j].getTimeOfImmunity()>4)
+					if(skin[i][j].getStatus()==2&&skin[i][j].getTimeOfImmunity()>TOImm)
 					{   //якщо час імунітету  >4
 						skin[i][j].setStatus(0); //клітина стає здоровою, нестійкою до зараження
 						skin[i][j].setTimeOfInfection(0);//час зараження = 0
@@ -151,11 +197,16 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 			+IntToStr(DaySinceStartOfInfection));
 		}
 	}
-	else
+	/*else
 	{
+		Form2->Label1->Font->Size=36;
+		Form2->Label1->Caption="Неправильно введене N!";
 		Form2->Show();
-	}
+	}*/
 }
 //---------------------------------------------------------------------------
+
+
+
 
 

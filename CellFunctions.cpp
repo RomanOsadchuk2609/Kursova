@@ -40,7 +40,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++;/*infected = true;*/break;}
+									else {step++;infected = true;break;}
                                 }
                                 else {step++; break;}
                             }
@@ -53,7 +53,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++; /*infected = true;*/break;}
+									else {step++;infected = true;break;}
                                 }
                                 else {step++; break;}
                             }
@@ -66,7 +66,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++;  /*infected = true;*/break;}
+									else {step++;infected = true;break;}
                                 }
                                 else {step++; break;}
                             }
@@ -101,7 +101,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++; /*infected = true;*/break;}
+									else {step++; infected = true;break;}
                                 }
                                 else {step++; break;}
                             }
@@ -113,7 +113,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++; /*infected = true;*/break;}
+									else {step++; infected = true;break;}
                                 }
                                 else {step++; break;}
                             }
@@ -125,7 +125,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++; /*infected = true;*/break;}
+									else {step++; infected = true;break;}
                                 }
                                 else {step++; break;}
                             }
@@ -160,7 +160,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++;/*infected = true;*/ break;}
+									else {step++;infected = true; break;}
                                 }
 								else {step++; break;}
                             }
@@ -172,7 +172,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++; /*infected = true;*/break;}
+									else {step++;infected = true;break;}
                                 }
 								else {step++; break;}
                             }
@@ -184,7 +184,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++;/*infected = true;*/ break;}
+									else {step++;infected = true; break;}
                                 }
                                 else {step++; break;}
                             }
@@ -219,8 +219,8 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++;/*infected = true;*/ break;}
-                                }
+									else {step++;infected = true; break;}
+								}
                                 else {step++; break;}
                             }
                             case 2: {
@@ -231,7 +231,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++; /*infected = true;*/break;}
+									else {step++; infected = true;break;}
                                 }
                                 else {step++; break;}
                             }
@@ -243,7 +243,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++;/*infected = true;*/ break;}
+									else {step++;infected = true; break;}
                                 }
                                 else {step++; break;}
                             }
@@ -278,8 +278,8 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++; /*infected = true;*/break;}
-                                }
+									else {step++; infected = true;break;}
+								}
                                 else {step++; break;}
                             }
                             case 2: {
@@ -290,7 +290,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++;/*infected = true;*/ break;}
+									else {step++;infected = true; break;}
                                 }
                                 else {step++; break;}
                             }
@@ -302,7 +302,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++;/*infected = true;*/ break;}
+									else {step++;infected = true; break;}
                                 }
                                 else {step++; break;}
                             }
@@ -314,7 +314,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
 									}
-									else {step++;/*infected = true;*/ break;}
+									else {step++;infected = true; break;}
                                 }
                                 else {step++; break;}
                             }
@@ -326,7 +326,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++;/*infected = true;*/ break;}
+									else {step++;infected = true; break;}
                                 }
                                 else {step++; break;}
                             }
@@ -361,7 +361,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++; /*infected = true;*/break;}
+									else {step++;infected = true;break;}
                                 }
                                 else {step++; break;}
                             }
@@ -373,7 +373,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++;/*infected = true;*/ break;}
+									else {step++;infected = true;break;}
 								}
                                 else {step++; break;}
                             }
@@ -385,7 +385,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++;/*infected = true;*/ break;}
+									else {step++;infected = true; break;}
 								}
                                 else {step++; break;}
                             }
@@ -397,7 +397,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++;/*infected = true;*/ break;}
+									else {step++;infected = true; break;}
                                 }
                                 else {step++; break;}
                             }
@@ -409,7 +409,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++; /*infected = true;*/break;}
+									else {step++; infected = true;break;}
                                 }
                                 else {step++; break;}
                             }
@@ -444,7 +444,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++;/*infected = true;*/break;}
+									else {step++;infected = true;break;}
                                 }
                                 else {step++; break;}
                             }
@@ -456,7 +456,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++;/*infected = true;*/ break;}
+									else {step++;infected = true;break;}
                                 }
                                 else {step++; break;}
                             }
@@ -468,8 +468,8 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++; /*infected = true;*/break;}
-                                }
+									else {step++; infected = true;break;}
+								}
                                 else {step++; break;}
                             }
                             case 4: {
@@ -480,7 +480,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++; /*infected = true;*/break;}
+									else {step++; infected = true;break;}
                                 }
                                 else {step++; break;}
                             }
@@ -492,7 +492,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++;/*infected = true;*/break;}
+									else {step++;infected = true;break;}
                                 }
                                 else {step++; break;}
                             }
@@ -527,8 +527,8 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++; /*infected = true;*/break;}
-                                }
+									else {step++;infected = true;break;}
+								}
                                 else {step++; break;}
                             }
                             case 2: {
@@ -539,7 +539,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++; /*infected = true;*/break;}
+									else {step++; infected = true;break;}
                                 }
                                 else {step++; break;}
                             }
@@ -551,7 +551,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++; /*infected = true;*/break;}
+									else {step++; infected = true;break;}
                                 }
                                 else {step++; break;}
                             }
@@ -563,7 +563,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++;/*infected = true;*/ break;}
+									else {step++;infected = true; break;}
                                 }
                                 else {step++; break;}
                             }
@@ -575,7 +575,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++;/*infected = true;*/break;}
+									else {step++;infected = true;break;}
                                 }
                                 else {step++; break;}
                             }
@@ -618,7 +618,7 @@ void infect(int N, CELL **&skin)
                                         //step++;
                                         break;
                                     }
-									else if (!f) {step++;/*infected = true;*/ break;}
+									else if (!f) {step++;infected = true; break;}
                                 }
                                 else {step++; break;}
                             }
@@ -630,7 +630,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                     break;
                                     }
-								else {step++;/*infected = true;*/break;}
+								else {step++;infected = true;break;}
                             }
                             else {step++; break;}
                             }
@@ -642,7 +642,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++; /*infected = true;*/break;}
+									else {step++; infected = true;break;}
                                 }
                                 else {step++; break;}
                             }
@@ -654,7 +654,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++;/*infected = true;*/ break;}
+									else {step++;infected = true; break;}
                                 }
                                 else {step++; break;}
                             }
@@ -666,7 +666,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++;/*infected = true;*/ break;}
+									else {step++;infected = true; break;}
                                 }
                                 else {step++; break;}
                             }
@@ -678,7 +678,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++; /*infected = true;*/break;}
+									else {step++; infected = true;break;}
                                 }
                                 else {step++; break;}
                             }
@@ -690,7 +690,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++;/*infected = true;*/break;}
+									else {step++;infected = true;break;}
                                 }
                                 else {step++; break;}
                             }
@@ -702,7 +702,7 @@ void infect(int N, CELL **&skin)
                                         infected = true;
                                         break;
                                     }
-									else {step++; /*infected = true;*/break;}
+									else {step++; infected = true;break;}
                                 }
                                 else {step++; break;}
                             }
