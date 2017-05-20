@@ -49,6 +49,7 @@ __published:	// IDE-managed Components
 	TUpDown *UpDownTimeOfImmunity;
 	TEdit *EditTimeOfImmunity;
 	TLabel *LabelTimeOfImmunity;
+	TCheckBox *CheckBoxRandom;
 	void __fastcall Button1Click(TObject *Sender);
 
 
