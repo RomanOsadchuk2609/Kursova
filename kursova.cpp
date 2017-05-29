@@ -7,6 +7,7 @@
 #include "CellFunctions.h"
 #include "kursova.h"
 #include "errorform.h"
+#include "formEnd.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -21,7 +22,8 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 
 void __fastcall TForm1::Button1Click(TObject *Sender)
 {
-    int N;
+
+	int N;
 	double Pause;
 	//Pause = StrToFloat(EditPause->Text);
 	Pause = TrackBarDayTime->Position;
@@ -152,7 +154,7 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 		IntToStr(DaySinceStartOfInfection));
 		while(healthy!=N*N)
 		{
-			Sleep(Pause/**1000*/);
+			Sleep(Pause);
 			infect (N, skin);
 			infected = 0; healthy = 0; healed = 0;
 			for (int i=0; i<N; i++)
@@ -173,7 +175,7 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 					if(skin[i][j].getStatus()==0) healthy++;
 					else if(skin[i][j].getStatus()==1) infected++;
 					else if(skin[i][j].getStatus()==2) healed++;
-                    if(skin[i][j].getStatus()==0)
+					if(skin[i][j].getStatus()==0)
 					{
 						Canvas->Pen->Color=ColorBoxHealthy->Selected;
 						Canvas->Brush->Color=ColorBoxHealthy->Selected;
@@ -200,6 +202,7 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 			Memo1->Lines->Append("\nÊ³ëüê³ñòü äí³â â³ä ïî÷àòêó ³íôåêö³¿:"
 			+IntToStr(DaySinceStartOfInfection));
 		}
+		EndForm->Show();
 	}
 
 }

@@ -10,14 +10,18 @@
     <Transaction>1899.12.30 00:00:00.000.492,C:\Users\1\Documents\Embarcadero\Studio\Projects\errorform.h=C:\Users\1\Documents\Embarcadero\Studio\Projects\Unit2.h</Transaction>
     <Transaction>1899.12.30 00:00:00.000.759,C:\Users\1\Documents\Embarcadero\Studio\Projects\Project1.cbproj=C:\Users\1\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
     <Transaction>1899.12.30 00:00:00.000.342,C:\Users\1\Documents\Embarcadero\Studio\Projects\Unit1.h=C:\Users\1\Documents\Embarcadero\Studio\Projects\kursova.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.342,C:\Users\1\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\1\Documents\Embarcadero\Studio\Projects\kursova.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.512,=C:\Users\1\Documents\Embarcadero\Studio\Projects\File1.h</Transaction>
     <Transaction>1899.12.30 00:00:00.000.054,C:\Users\1\Documents\Embarcadero\Studio\Projects\File1.cpp=C:\Users\1\Documents\Embarcadero\Studio\Projects\CellFunctions.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.821,=C:\Users\1\Documents\Embarcadero\Studio\Projects\File1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.342,C:\Users\1\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\1\Documents\Embarcadero\Studio\Projects\kursova.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.706,C:\Users\1\Documents\Embarcadero\Studio\Projects\File2.cpp=C:\Users\1\Documents\Embarcadero\Studio\Projects\CELL.cpp</Transaction>
     <Transaction>1899.12.30 00:00:00.000.878,=C:\Users\1\Documents\Embarcadero\Studio\Projects\File2.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.821,=C:\Users\1\Documents\Embarcadero\Studio\Projects\File1.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.342,C:\Users\1\Documents\Embarcadero\Studio\Projects\Unit1.cpp=C:\Users\1\Documents\Embarcadero\Studio\Projects\kursova.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.512,=C:\Users\1\Documents\Embarcadero\Studio\Projects\File1.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.492,C:\Users\1\Documents\Embarcadero\Studio\Projects\errorform.dfm=C:\Users\1\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.311,=C:\Users\1\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.342,C:\Users\1\Documents\Embarcadero\Studio\Projects\Unit1.cpp=C:\Users\1\Documents\Embarcadero\Studio\Projects\kursova.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.492,C:\Users\1\Documents\Embarcadero\Studio\Projects\errorform.dfm=C:\Users\1\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2017.05.29 12:52:23.375,=C:\Users\1\Documents\Embarcadero\Studio\Projects\Unit3.cpp</Transaction>
+    <Transaction>2017.05.29 13:10:33.937,C:\Users\1\Documents\Embarcadero\Studio\Projects\formEnd.cpp=C:\Users\1\Documents\Embarcadero\Studio\Projects\Unit3.cpp</Transaction>
+    <Transaction>2017.05.29 13:10:33.937,C:\Users\1\Documents\Embarcadero\Studio\Projects\formEnd.dfm=C:\Users\1\Documents\Embarcadero\Studio\Projects\Unit3.dfm</Transaction>
+    <Transaction>2017.05.29 13:10:33.937,C:\Users\1\Documents\Embarcadero\Studio\Projects\formEnd.h=C:\Users\1\Documents\Embarcadero\Studio\Projects\Unit3.h</Transaction>
   </Transactions>
 </BorlandProject>

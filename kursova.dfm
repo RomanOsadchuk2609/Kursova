@@ -1833,8 +1833,8 @@ object Form1: TForm1
   PixelsPerInch = 96
   TextHeight = 13
   object LabelN1: TLabel
-    Left = 658
-    Top = 16
+    Left = 672
+    Top = 19
     Width = 294
     Height = 23
     Caption = #1042#1074#1077#1076#1110#1090#1100' '#1088#1086#1079#1084#1110#1088' '#1076#1110#1083#1103#1085#1080#1082#1080' '#1096#1110#1082#1088#1080' N:'
@@ -1846,7 +1846,7 @@ object Form1: TForm1
     ParentFont = False
   end
   object LabelN2: TLabel
-    Left = 726
+    Left = 740
     Top = 37
     Width = 131
     Height = 19
@@ -1859,8 +1859,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object LabelPause: TLabel
-    Left = 681
-    Top = 88
+    Left = 689
+    Top = 72
     Width = 367
     Height = 23
     Caption = #1058#1088#1080#1074#1072#1083#1110#1089#1090#1100' 1 '#1076#1085#1103' '#1079#1072#1088#1072#1078#1077#1085#1085#1103'('#1074' '#1089#1077#1082#1091#1085#1076#1072#1093'):'
@@ -1872,8 +1872,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object LabelHealthy: TLabel
-    Left = 777
-    Top = 195
+    Left = 785
+    Top = 187
     Width = 155
     Height = 23
     Caption = '- '#1079#1076#1086#1088#1086#1074#1072' '#1082#1083#1110#1090#1080#1085#1072
@@ -1885,8 +1885,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Labelinfected: TLabel
-    Left = 777
-    Top = 231
+    Left = 785
+    Top = 223
     Width = 169
     Height = 23
     Caption = '- '#1079#1072#1088#1072#1078#1077#1085#1072' '#1082#1083#1110#1090#1080#1085#1072
@@ -1898,8 +1898,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object LabelHealed: TLabel
-    Left = 777
-    Top = 267
+    Left = 785
+    Top = 259
     Width = 189
     Height = 23
     Caption = '- '#1082#1083#1110#1090#1080#1085#1072' '#1079' '#1110#1084#1091#1085#1110#1090#1077#1090#1086#1084
@@ -1911,8 +1911,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label0: TLabel
-    Left = 666
-    Top = 143
+    Left = 674
+    Top = 127
     Width = 10
     Height = 23
     Caption = '0'
@@ -1924,8 +1924,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label5: TLabel
-    Left = 1110
-    Top = 151
+    Left = 1062
+    Top = 127
     Width = 10
     Height = 23
     Caption = '5'
@@ -1937,8 +1937,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 821
-    Top = 143
+    Left = 829
+    Top = 127
     Width = 10
     Height = 23
     Caption = '2'
@@ -1950,8 +1950,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label4: TLabel
-    Left = 976
-    Top = 143
+    Left = 984
+    Top = 127
     Width = 10
     Height = 23
     Caption = '4'
@@ -1963,8 +1963,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label3: TLabel
-    Left = 899
-    Top = 143
+    Left = 907
+    Top = 127
     Width = 10
     Height = 23
     Caption = '3'
@@ -1976,8 +1976,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label1: TLabel
-    Left = 744
-    Top = 143
+    Left = 752
+    Top = 127
     Width = 10
     Height = 23
     Caption = '1'
@@ -1989,8 +1989,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label05: TLabel
-    Left = 701
-    Top = 142
+    Left = 709
+    Top = 126
     Width = 21
     Height = 18
     Caption = '0,5'
@@ -2002,8 +2002,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label15: TLabel
-    Left = 777
-    Top = 142
+    Left = 785
+    Top = 126
     Width = 21
     Height = 18
     Caption = '1,5'
@@ -2015,8 +2015,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label25: TLabel
-    Left = 855
-    Top = 142
+    Left = 863
+    Top = 126
     Width = 21
     Height = 18
     Caption = '2,5'
@@ -2028,8 +2028,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label35: TLabel
-    Left = 933
-    Top = 142
+    Left = 941
+    Top = 126
     Width = 21
     Height = 18
     Caption = '3,5'
@@ -2041,8 +2041,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label45: TLabel
-    Left = 1010
-    Top = 142
+    Left = 1018
+    Top = 126
     Width = 21
     Height = 18
     Caption = '4,5'
@@ -2056,7 +2056,7 @@ object Form1: TForm1
   object Image1: TImage
     Left = 0
     Top = 0
-    Width = 650
+    Width = 649
     Height = 650
     Picture.Data = {
       0A544A504547496D61676568080700FFD8FFE1372B4578696600004D4D002A00
@@ -16491,7 +16491,7 @@ object Form1: TForm1
     ParentFont = False
   end
   object EditN: TEdit
-    Left = 958
+    Left = 972
     Top = 16
     Width = 115
     Height = 31
@@ -16534,8 +16534,8 @@ object Form1: TForm1
     TabOrder = 2
   end
   object ColorBoxHealthy: TColorBox
-    Left = 658
-    Top = 197
+    Left = 666
+    Top = 189
     Width = 99
     Height = 22
     NoneColorColor = clLime
@@ -16543,8 +16543,8 @@ object Form1: TForm1
     TabOrder = 3
   end
   object ColorBoxInfected: TColorBox
-    Left = 658
-    Top = 233
+    Left = 666
+    Top = 225
     Width = 99
     Height = 22
     NoneColorColor = clRed
@@ -16552,8 +16552,8 @@ object Form1: TForm1
     TabOrder = 4
   end
   object ColorBoxHealed: TColorBox
-    Left = 658
-    Top = 269
+    Left = 666
+    Top = 261
     Width = 99
     Height = 22
     NoneColorColor = clBlue
@@ -16561,8 +16561,8 @@ object Form1: TForm1
     TabOrder = 5
   end
   object TrackBarDayTime: TTrackBar
-    Left = 658
-    Top = 109
+    Left = 666
+    Top = 93
     Width = 415
     Height = 36
     Max = 5000

@@ -132,6 +132,12 @@
             <DependentOn>errorform.h</DependentOn>
             <BuildOrder>7</BuildOrder>
         </CppCompile>
+        <CppCompile Include="formEnd.cpp">
+            <Form>EndForm</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>formEnd.h</DependentOn>
+            <BuildOrder>8</BuildOrder>
+        </CppCompile>
         <CppCompile Include="kursova.cpp">
             <Form>Form1</Form>
             <FormType>dfm</FormType>
@@ -147,6 +153,7 @@
         </PCHCompile>
         <FormResources Include="kursova.dfm"/>
         <FormResources Include="errorform.dfm"/>
+        <FormResources Include="formEnd.dfm"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
